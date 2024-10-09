@@ -1,0 +1,4 @@
+function riceviNumero () 
+{
+    alert("suca");
+}
