@@ -1,8 +1,3 @@
-<?php
-setcookie("user-session", "", time() - 86400);
-// Cancelliamo i cookie quando si torna sulla pagina di login
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +10,7 @@ setcookie("user-session", "", time() - 86400);
     <h1>Login su Bossetti-Net</h1>
     <div class="login-box">
         <form action="server.php" method="post">
-            <label for="username">Username o email:</label>
+            <label for="username">Username:</label>
             <input type="text" name="username" id="username" required>
             <br>
             <label for="password">Password:</label>

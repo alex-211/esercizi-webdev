@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Boss Login - Porpiglia 5AINF</title>
+    <title>Login var. globali - Porpiglia 5AINF</title>
 </head>
+<body>
 <body class="geist-mono main">
     <h1>Login su Bossetti-Net</h1>
     <div class="login-box">
-        <p>Utente non riconosciuto, password o username errati</p>
-        <a href="index.php">Logout</a>
+        <h2>Oh no</h2>
+        <p>Password e username sbagliate, brutta storia</p>
+        <a href="index.php">peccato</a>
     </div>
+</body>
 </body>
 </html>

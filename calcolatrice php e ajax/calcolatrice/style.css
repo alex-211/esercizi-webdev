@@ -1,1 +1,49 @@
-.zero {align-items: center;}
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+.grid 
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+    width: 200px;
+    height: 200px;
+    font-size: 15px;
+}
+
+.geist-mono 
+{
+    font-family: "Geist Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.calc 
+{
+    background-color: white !important;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    z-index:10;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 20px;
+    align-items: center;
+}
+
+body
+{
+    align-items: center;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}

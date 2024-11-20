@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Super Calcolatrice - Porpiglia5AINF</title>
+    <script src="script.js"></script>
+    <title>Calcolatrice AJAX</title>
 </head>
 <body>
-    <div>
-        <button id="1" onclick="riceviNumero()">1</button>
-        <button id="2" onclick="riceviNumero()">2</button>
-        <button id="3" onclick="riceviNumero()">3</button>
+    <h1 class="geist-mono">Calcolatrice con chiamate AJAX</h1>
+    <div class="calc">
+        <input type="text" name="box" id="box">
         <br>
-        <button id="4" onclick="riceviNumero()">4</button>
-        <button id="5" onclick="riceviNumero()">5</button>
-        <button id="6" onclick="riceviNumero()">6</button>
-        <br>
-        <button id="7" onclick="riceviNumero()">7</button>
-        <button id="8" onclick="riceviNumero()">8</button>
-        <button id="9" onclick="riceviNumero()">9</button>
-        <br>
-        <button id="0" name="zero" onclick="riceviNumero()">0</button>
+        <div class="grid">
+            <button onclick="allClear()">AC</button>
+            <button onclick="add('pa')">(</button>
+            
+            <button onclick="add('pc')">)</button>
+            <button onclick="add('%')">%</button>
+            <button onclick="add('/')">÷</button>
+            
+            <button onclick="add('7')">7</button>
+            <button onclick="add('8')">8</button>
+            <button onclick="add('9')">9</button>
+            <button onclick="add('*')">X</button>
+            
+            <button onclick="add('4')">4</button>
+            <button onclick="add('5')">5</button>
+            <button onclick="add('6')">6</button>
+            <button onclick="add('-')">-</button>
+            
+            <button onclick="add('1')">1</button>
+            <button onclick="add('2')">2</button>
+            <button onclick="add('3')">3</button>
+            <button onclick="add('+')">+</button>
+            
+            <button onclick="add('0')">0</button>
+            <button onclick="add(',')">,</button>
+            <button onclick="clearEntry()">CE</button>
+            <button onclick="equalsRequest()">=</button>
+        </div>
     </div>
 </body>
 </html>
