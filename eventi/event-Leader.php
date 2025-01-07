@@ -10,8 +10,7 @@
 <nav>
     <span id="navbar-title"></span>
     <div class="links">
-        <a href="#">Aggiungi evento</a>
-        <a href="#">Modifica evento</a>
+        <a href="eventEditor.php">Aggiungi/modifica evento</a>
         <a href="home.php">Torna alla home</a>
         <a href="logout.php">Logout</a>
     </div>
