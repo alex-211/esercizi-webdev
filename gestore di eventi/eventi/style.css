@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+/*body
+{
+    align-items: center;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 30%, rgba(252,176,69,1) 100%);
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.geist-mono {
+    font-family: "Geist Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h1 
+{
+    align-items: center;
+    width: 100%;
+    display: flex; 
+
+    justify-content: center; 
+    align-items: center; 
+}
+
+div
+{
+    background-color: white !important;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    z-index:10;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 20px;
+    align-items: center;
+}*/
+
+/*homepage stuff here*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .links {
+    display: flex;
+    gap: 15px;
+}
+
+nav .links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav .links a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.box {
+    position: relative;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 16px;
+    padding: 5px;
+    width: 280px; 
+    height: 170px; 
+    overflow-y: scroll;
+}
+
+.box-title {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.events {
+    list-style-type: none;
+    margin: 20px 0 0; /* Add margin to prevent overlap with the title */
+    padding: 0;
+}
+
+.events li {
+    cursor: pointer;
+    padding: 3px;
+    border-bottom: 1px solid #ddd;
+}
+
+.events li:hover {
+    background-color: #e0e0e0;
+}
