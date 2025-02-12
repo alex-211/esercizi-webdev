@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Lista degli utenti</h1>
+    <a href="index.php?url=create"><button>Crea nuovo utente</button></a>
     <?php
         foreach ($users as $user):
     ?>
