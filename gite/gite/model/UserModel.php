@@ -53,8 +53,40 @@ class UserModel
 
     public function fetchDetails($id)
     {
+        if ($id == null)
+        {
+            return null;
+        }
         $query = $this->conn->prepare("SELECT nome, cognome, classe, email FROM utente WHERE id = :id"); // boh? id
         $query->execute(['id' => $id]);
         return $query->fetch();
+    }
+
+    class gitaModel
+    {
+        private $conn
+        public function __construct()
+        {
+            $this->conn = $conn
+        }
+
+        public function create($nome, $data_inizio, $data_fine)
+        {
+            idQuery = $this->conn->prepare("SELECT MAX(id) FROM gita");
+            $idQuery->execute();
+            $id = $idQuery->fetchColumn(); // fetch o fetchColumn è essenziale per leggere il valore restituito. fetch restituisce un array mentre fetchColumn un dato
+
+            if ($id == null)
+            {
+                $id = 1;
+            }
+            else 
+            {
+                $id++;
+            }
+
+            $query = $this->conn->prepare("INSERT INTO gite VALUES(?, ?, ?, ?");
+            return query->execute([$id, $nome, $data_inizio, $data_fine]);
+        }
     }
 }
