@@ -5,7 +5,7 @@ namespace model;
 class UserModel
 {
     private $conn;
-    public function __construct()
+    public function __construct($conn)
     {
         $this->conn = $conn;    
     }
@@ -61,32 +61,38 @@ class UserModel
         $query->execute(['id' => $id]);
         return $query->fetch();
     }
+}
 
-    class gitaModel
+class gitaModel
+{
+    private $conn;
+    public function __construct($conn)
     {
-        private $conn
-        public function __construct()
+        $this->conn = $conn;
+    }
+
+    public function create($nome, $data_inizio, $data_fine)
+    {
+        $idQuery = $this->conn->prepare("SELECT MAX(id) FROM gita");
+        $idQuery->execute();
+        $id = $idQuery->fetchColumn(); //* fetch o fetchColumn è essenziale per leggere il valore restituito. fetch restituisce un array mentre fetchColumn un dato
+
+        if ($id == null)
         {
-            $this->conn = $conn
+            $id = 1;
+        }
+        else 
+        {
+            $id++;
         }
 
-        public function create($nome, $data_inizio, $data_fine)
-        {
-            idQuery = $this->conn->prepare("SELECT MAX(id) FROM gita");
-            $idQuery->execute();
-            $id = $idQuery->fetchColumn(); // fetch o fetchColumn è essenziale per leggere il valore restituito. fetch restituisce un array mentre fetchColumn un dato
+        $query = $this->conn->prepare("INSERT INTO gite VALUES(?, ?, ?, ?)");
+        return $query->execute([$id, $nome, $data_inizio, $data_fine]);
+    }
 
-            if ($id == null)
-            {
-                $id = 1;
-            }
-            else 
-            {
-                $id++;
-            }
-
-            $query = $this->conn->prepare("INSERT INTO gite VALUES(?, ?, ?, ?");
-            return query->execute([$id, $nome, $data_inizio, $data_fine]);
-        }
+    public function modify($id, $nome, $data_inizio, $data_fine)
+    {
+        //TODO write a query that modifies the values in the table based on the id
+        
     }
 }

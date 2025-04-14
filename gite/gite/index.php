@@ -1,9 +1,9 @@
 <?php
     require_once 'config.php';
     require_once 'model/userModel.php';
-    require_once 'controlloer/userController.php';
+    require_once 'controller/userController.php';
 
-    use userController;
+    use controller\userController;
     $controller = new userController($conn);
 
     if (isset($_GET['url']))
@@ -18,7 +18,7 @@
     switch ($url)
     {
         case '/':
-        header('Location: login.php');
-        break;
+            header('Location: view/login.php'); 
+            break;
     }
 ?>
